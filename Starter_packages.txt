@@ -1,0 +1,42 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}	%Gestion dans les environnements mathématiques.
+\usepackage{amssymb}
+\usepackage{bbm}		%Gestion des caractères pour les ensembles (N, Z, Q, R, C)
+\usepackage{graphicx} 	%Gestion des images.
+\usepackage{array}		%Gestion spécifique pour les tableaux.
+						%Paramètres de placement dans les cellules: m, p, b. 
+						%Avec dimensionnement de la colonne: m{2cm}.
+\usepackage{multicol}	%Gère la mise en colonnes du texte.
+\usepackage[french]{babel}  %Pour les fonctionnalités en français (language).
+\usepackage[T1]{fontenc}    %Pour les fonctionnalités en français (font),
+							%parmamètre par défaut: OT1.
+\usepackage{fancyhdr}	%Gère la personnalisation des headers.
+\usepackage{geometry}
+\usepackage{marginnote}	%Gère la création de notes en marge du texte.
+\usepackage{adjustbox}	%Options additionnelles de placement de l'image 
+						%(left, right, center, outer and inner)
+%-----------------------------------------------------------------------------
+\title{Utilisation de fonctions \LaTeX}
+\author{Lucas Wälti}
+\date{\today}
+%-----------------------------------------------------------------------------
+\pagestyle{fancy} 	%Types de headers standards: empty, plain (default),
+					%							 headings, myheadings, fancy.
+\fancyhf{}			%Clear le header et footer par défaut.
+\rhead{Share\LaTeX}
+\lhead{Guides and tutorials}	%Texte à droite, gauche et au centre du header.
+\chead{}
+\rfoot{}
+\lfoot{}
+\cfoot{Page \thepage}			%Texte du footer (ici: numéro de page).
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}	%Lignes horizontales de séparation.
+%-----------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{empty}	%Supprime le header et le footer pour cette page. 
+
+\end{document}
