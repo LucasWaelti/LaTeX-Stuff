@@ -17,6 +17,8 @@
 \usepackage{marginnote}	%Gère la création de notes en marge du texte.
 \usepackage{adjustbox}	%Options additionnelles de placement de l'image 
 						%(left, right, center, outer and inner)
+\usepackage{float}
+\usepackage{rotating}	%Permet d'afficher une image, tournée de 90 degrés.
 %-----------------------------------------------------------------------------
 \title{Utilisation de fonctions \LaTeX}
 \author{Lucas Wälti}
@@ -34,6 +36,9 @@
 
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}	%Lignes horizontales de séparation.
+
+% For Fourier, Laplace, Z --> use \mathcal{L}
+
 %-----------------------------------------------------------------------------
 \begin{document}
 \maketitle
