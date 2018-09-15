@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.24)  21 AUG 2018 21:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.8.24)  15 SEP 2018 17:09
 entering extended mode
 **./FourierLaplaceZ.tex
 (FourierLaplaceZ.tex
@@ -598,6 +598,18 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box56
 \@float@everytoks=\toks27
 \@floatcapt=\box57
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty"
+Package: rotating 2016/05/22 v2.16c rotated objects in LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count117
+\rotFPtop=\skip59
+\rotFPbot=\skip60
+\rot@float@box=\box58
+\rot@mess@toks=\toks28
 ) (FourierLaplaceZ.aux
 
 LaTeX Warning: Label `FourierContProperties' multiply defined.
@@ -611,31 +623,31 @@ LaTeX Warning: Label `FourierContProperties' multiply defined.
 )
 \openout1 = `FourierLaplaceZ.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
+\scratchcounter=\count118
 \scratchdimen=\dimen143
-\scratchbox=\box58
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count120
+\scratchbox=\box59
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count121
 \MPscratchDim=\dimen144
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks29
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks30
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -715,23 +727,23 @@ G,.JBIG2,.JB2,.eps]
 Package marginnote Info: \pdfoutput not 0 or unimportant and
 (marginnote)             \pdflastxpos or \lastxpos available.
 (marginnote)             Extended position detection mode activated.
-LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+LaTeX Font Info:    Try loading font information for U+msa on input line 39.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+LaTeX Font Info:    Try loading font information for U+msb on input line 39.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (FourierLaplaceZ.toc)
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (FourierLaplaceZ.toc [2])
 \tf@toc=\write3
 \openout3 = `FourierLaplaceZ.toc'.
 
- [2] [3] [4] [5]
-[6] [7] [8]
-Overfull \hbox (2.2236pt too wide) detected at line 418
+ [3] [4] [5]
+[6] [7] [8] [9]
+Overfull \hbox (2.2236pt too wide) detected at line 419
 \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = [][]
  \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )\OML/c
 mm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10   \OML/cmm/m
@@ -745,71 +757,115 @@ cmsy/m/n/10   \OML/cmm/m/it/10 \OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d \OT1/cmr/m
  \OML/cmm/m/it/10 nT[]\OT1/cmr/m/n/10 )
  []
 
-[9]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 472.
+[10]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 481.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 472.
- [10] [11] [12]
-[13] [14] <FourierContProperties.PNG, id=67, 341.47575pt x 410.7345pt>
-File: FourierContProperties.PNG Graphic file (type png)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 481.
+ [11] [12]
+[13] [14] [15]
+Overfull \hbox (25.20193pt too wide) in paragraph at lines 713--714
+\OT1/cmr/m/n/10 mul-ti-ply the discrete-time trans-fer func-tion by a gain $\OM
+L/cmm/m/it/10 k[]$ \OT1/cmr/m/n/10 such as $[](\OML/cmm/m/it/10 G\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )) = [](\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 
+(\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 )) \OMS/cmsy/m/n/10 
+ []
 
-<use FourierContProperties.PNG>
-Package pdftex.def Info: FourierContProperties.PNG used on input line 655.
+[16] [17] <1FourierContProperties.PNG, id=76, 341.47575pt x 410.7345pt>
+File: 1FourierContProperties.PNG Graphic file (type png)
+
+<use 1FourierContProperties.PNG>
+Package pdftex.def Info: 1FourierContProperties.PNG used on input line 755.
 (pdftex.def)             Requested size: 341.47491pt x 410.73349pt.
 
-<FourierContIdentities.PNG, id=69, 375.20175pt x 444.4605pt>
-File: FourierContIdentities.PNG Graphic file (type png)
+<1FourierContIdentities.PNG, id=78, 375.20175pt x 444.4605pt>
+File: 1FourierContIdentities.PNG Graphic file (type png)
 
-<use FourierContIdentities.PNG>
-Package pdftex.def Info: FourierContIdentities.PNG used on input line 661.
+<use 1FourierContIdentities.PNG>
+Package pdftex.def Info: 1FourierContIdentities.PNG used on input line 761.
 (pdftex.def)             Requested size: 375.20082pt x 444.45941pt.
- [15 <./FourierContProperties.PNG>] [16 <./FourierContIdentities.PNG>]
-File: FourierContProperties.PNG Graphic file (type png)
- <use FourierContProperties.PNG>
-Package pdftex.def Info: FourierContProperties.PNG used on input line 673.
-(pdftex.def)             Requested size: 341.47491pt x 410.73349pt.
-File: FourierContIdentities.PNG Graphic file (type png)
+ [18 <./1FourierContProperties.PNG>] [19 <./1FourierContIdentities.PNG>]
+<2FourierDiscreteProperties.PNG, id=88, 373.395pt x 461.3235pt>
+File: 2FourierDiscreteProperties.PNG Graphic file (type png)
 
-<use FourierContIdentities.PNG>
-Package pdftex.def Info: FourierContIdentities.PNG used on input line 679.
-(pdftex.def)             Requested size: 375.20082pt x 444.45941pt.
- [17] [18]
-File: FourierContProperties.PNG Graphic file (type png)
- <use FourierContProperties.PNG>
-Package pdftex.def Info: FourierContProperties.PNG used on input line 691.
-(pdftex.def)             Requested size: 341.47491pt x 410.73349pt.
-File: FourierContIdentities.PNG Graphic file (type png)
+<use 2FourierDiscreteProperties.PNG>
+Package pdftex.def Info: 2FourierDiscreteProperties.PNG used on input line 773.
 
-<use FourierContIdentities.PNG>
-Package pdftex.def Info: FourierContIdentities.PNG used on input line 697.
-(pdftex.def)             Requested size: 375.20082pt x 444.45941pt.
- [19] [20]
-File: FourierContProperties.PNG Graphic file (type png)
- <use FourierContProperties.PNG>
-Package pdftex.def Info: FourierContProperties.PNG used on input line 709.
-(pdftex.def)             Requested size: 341.47491pt x 410.73349pt.
-File: FourierContIdentities.PNG Graphic file (type png)
+(pdftex.def)             Requested size: 373.39409pt x 461.32237pt.
 
-<use FourierContIdentities.PNG>
-Package pdftex.def Info: FourierContIdentities.PNG used on input line 715.
-(pdftex.def)             Requested size: 375.20082pt x 444.45941pt.
- [21] [22] (FourierLaplaceZ.aux)
+<2FourierDiscreteIdentities.PNG, id=89, 461.3235pt x 537.80925pt>
+File: 2FourierDiscreteIdentities.PNG Graphic file (type png)
+
+<use 2FourierDiscreteIdentities.PNG>
+Package pdftex.def Info: 2FourierDiscreteIdentities.PNG used on input line 779.
+
+(pdftex.def)             Requested size: 415.18732pt x 484.02383pt.
+ [20 <./2FourierDiscreteProperties.PNG>]
+[21 <./2FourierDiscreteIdentities.PNG>]
+<3LaplaceProperties.PNG, id=98, 568.524pt x 476.982pt>
+File: 3LaplaceProperties.PNG Graphic file (type png)
+
+<use 3LaplaceProperties.PNG>
+Package pdftex.def Info: 3LaplaceProperties.PNG used on input line 791.
+(pdftex.def)             Requested size: 454.81982pt x 381.5861pt.
+
+Overfull \hbox (36.56615pt too wide) in paragraph at lines 791--792
+ [][] 
+ []
+
+<3LaplaceIdentities.PNG, id=99, 439.04025pt x 540.21825pt>
+File: 3LaplaceIdentities.PNG Graphic file (type png)
+
+<use 3LaplaceIdentities.PNG>
+Package pdftex.def Info: 3LaplaceIdentities.PNG used on input line 797.
+(pdftex.def)             Requested size: 395.13258pt x 486.19193pt.
+ [22 <./3LaplaceProperties.PNG>] [23 <./3LaplaceIdentities.PNG>] <4ZProperties.
+PNG, id=108, 466.1415pt x 540.8205pt>
+File: 4ZProperties.PNG Graphic file (type png)
+
+<use 4ZProperties.PNG>
+Package pdftex.def Info: 4ZProperties.PNG used on input line 809.
+(pdftex.def)             Requested size: 419.52347pt x 486.73395pt.
+
+Overfull \hbox (1.26979pt too wide) in paragraph at lines 809--810
+ [][] 
+ []
+
+<4ZIdentities.PNG, id=109, 446.8695pt x 541.42274pt>
+File: 4ZIdentities.PNG Graphic file (type png)
+ <use 4ZIdentities.PNG>
+Package pdftex.def Info: 4ZIdentities.PNG used on input line 815.
+(pdftex.def)             Requested size: 402.17883pt x 487.27597pt.
+
+[24 <./4ZProperties.PNG>] <EquaDiff_1.PNG, id=114, 790.75426pt x 471.56175pt>
+File: EquaDiff_1.PNG Graphic file (type png)
+
+<use EquaDiff_1.PNG>
+Package pdftex.def Info: EquaDiff_1.PNG used on input line 824.
+(pdftex.def)             Requested size: 553.52422pt x 330.09097pt.
+ <EquaDiff_2.PNG, id=115, 779.3115pt x 525.162pt>
+File: EquaDiff_2.PNG Graphic file (type png)
+
+<use EquaDiff_2.PNG>
+Package pdftex.def Info: EquaDiff_2.PNG used on input line 832.
+(pdftex.def)             Requested size: 545.51433pt x 367.6109pt.
+ [25 <./4ZIdentities.PNG>] [26 <./EquaDiff_1.PNG>] [27 <./EquaDiff_2.PNG>] (Fou
+rierLaplaceZ.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4351 strings out of 493334
- 58554 string characters out of 3139229
- 138768 words of memory out of 3000000
- 7759 multiletter control sequences out of 15000+200000
+ 4501 strings out of 493334
+ 60922 string characters out of 3139229
+ 141547 words of memory out of 3000000
+ 7895 multiletter control sequences out of 15000+200000
  13166 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,43p,347b,272s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,12n,43p,426b,426s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
@@ -829,9 +885,9 @@ sy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on FourierLaplaceZ.pdf (22 pages, 796644 bytes).
+Output written on FourierLaplaceZ.pdf (27 pages, 5301189 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
+ 194 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

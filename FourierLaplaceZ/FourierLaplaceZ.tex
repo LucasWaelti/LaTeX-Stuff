@@ -16,6 +16,7 @@
 \usepackage{adjustbox}	%Options additionnelles de placement de l'image 
 						%(left, right, center, outer and inner)
 \usepackage{float}
+\usepackage{rotating}	%Permet d'afficher une image, tournée de 90 degrés.
 %-----------------------------------------------------------------------------
 \title{Fourier, Laplace and Z transformations}
 \author{Lucas Wälti}
@@ -25,7 +26,7 @@
 					%							 headings, myheadings, fancy.
 \fancyhf{}			%Clear le header et footer par défaut.
 \rhead{Summary}
-\lhead{Fourier, Laplace and z transformations}	%Texte à droite, gauche et au centre du header.
+\lhead{Fourier, Laplace and Z transformations}	%Texte à droite, gauche et au centre du header.
 \chead{}
 \rfoot{}
 \lfoot{}
@@ -165,7 +166,7 @@ $$
 
 
 \section{The Fourier Transformation FT}
-The advantage of the Fourier transformation is to enable us to transform not periodical signals. The Fourier series can only work for periodic signals!
+The advantage of the Fourier transformation is to enable us to transform not periodical signals. The Fourier series can only work for periodic signals! Note here that both transformations can be multiplied by a factor $\frac{1}{\sqrt{2\pi}}$, depending on the convention. 
 $$
 \boxed{
 X(\omega) = \int_{-\infty}^{\infty} x(t) e^{-j \omega t} dt
@@ -453,13 +454,21 @@ X(s) = \int_{-\infty}^{\infty} x(t)e^{-st}dt}
 $$
 $$
 \boxed{
-x(t) = \frac{1}{2\pi j} \int_{\sigma-\infty}^{\sigma+\infty} X(s)e^{st}ds}
+x(t) = \frac{1}{2\pi j} \int_{\sigma-j\infty}^{\sigma+j\infty} X(s)e^{st}ds
+	 = \frac{1}{2\pi} \int_{-\infty}^{\infty} X(\sigma + j\omega)e^{(\sigma + j\omega)t}d\omega}
 \quad \textbf{\footnotemark}
 $$
 \footnotetext{
 The presence of $j$ here is due to the change of variables from the FT:
 $s = \sigma + j\omega$ which with partial derivation gives $ds = jd\omega \longrightarrow d\omega = \frac{ds}{j}$
 }
+
+Note: To solve the inverse transform, one can use the \emph{Residue Theorem} as follows:
+$$
+\frac{1}{2\pi j}\oint_C X(s)e^{st}ds = \sum_{k=1}^K Res\{X(s),s_k\}
+$$
+
+
 Considering that
 $$
 X(s) = X(\sigma+j\omega) = \int_{-\infty}^{\infty} (x(t)e^{-\sigma t})e^{-j\omega t}dt
@@ -476,7 +485,7 @@ In order for the LT to exist and to \textbf{converge}, with $\sigma_0$ providing
 $$
 \int_{-\infty}^{\infty} \vert x(t) \vert e^{-\sigma_0t} < \infty
 $$
-\textbf{IMPORTANT}: If $\Im m\{s\} \in \textit{Convergence Domain}$ then the FT converges also!
+\textbf{IMPORTANT}: If the \emph{Imaginary Axis} $ \in \textit{Convergence Domain}$ then the FT converges also!
 
 \subsection{The Unilateral Laplace Transformation}
 This is useful to study the response of systems to a stimulation.
@@ -594,6 +603,14 @@ with $k \in [1,K]$.
 
 In our case $f(z) = X(z)\cdot z^{n-1}$.
 
+To calculate Integrals of the form:
+$$
+\int_{-\infty}^{\infty} f(x) e^{i\omega x} dx = \int_{-\infty}^{\infty} \frac{p(x)}{q(x)} e^{i\omega x} dx
+$$
+with 
+$ f(x) = \frac{p(x)}{q(x)} $ where $q$ and $p$ are \emph{polynomial} functions so that $ q(x) \neq 0, \forall x \in R $ and $\text{deg}(q) - \text{deg}(p) \geq 2 $. Then only the residues in the upper part of the complex plane must be included when solving the integral. 
+If the exponential is negative or for negative values of $\omega$ ($\omega \leq 0$), only the poles of the lower part of the complex plain must be included. 
+
 \subsection{Transition from the LT to the ZT}
 There are many ways of numerically representing a function. Depending on how a function is represented, the relation between the LT and ZT will change. This transition is important for the implementation of filters, controllers, etc... that where derived in the Laplace domain and that need to be numerically implemented. 
 
@@ -621,7 +638,7 @@ s \: \hat{=} \: \frac{z-1}{hz}
 $$
 
 \paragraph{Trapeze Approximation}
-We express this time $\Delta y_k$ as 
+Also called \emph{Tustin} or \emph{Bilinear Transform}. We express this time $\Delta y_k$ as 
 $$
 \Delta y_k = \frac{h}{2}(x_{k-1} + x_k)
 $$
@@ -639,7 +656,90 @@ $$
 Which means we can substitute $s$ by
 $$
 \boxed{
-s \: \hat{=} \: \frac{2}{h} \frac{z-1}{z+1}
+s \: \hat{=} \: \frac{2}{h} \frac{z-1}{z+1} \quad \Leftrightarrow \quad 
+z \: \hat{=} \: \frac{1 + \frac{h}{2}s}{1 - \frac{h}{2}s} 
+}
+$$
+\subsection{Pre-warping of the Bilinear Transform}
+With the previous result:
+$$
+s \: \hat{=} \: \frac{2}{h} \frac{z-1}{z+1} \quad \Leftrightarrow \quad 
+z \: \hat{=} \: \frac{1 + \frac{h}{2}s}{1 - \frac{h}{2}s} 
+$$
+the behaviour of the digital transfer function will differ from the continuous one when the frequency reaches the Nyquist frequency. This is due to the warping of the s-domain into the z-domain. 
+
+Considering the frequency only, we can write:
+$$
+z = e^{j\omega_d T} = \frac{1+j\frac{\omega_a}{2} T}{1-j\frac{\omega_a}{2} T}
+$$
+which shows that $\omega_a \neq \omega_d$ (approx. linear for low frequencies):
+$$
+\omega_d = \frac{1}{jT} \text{ln}\left(\frac{1+j\frac{\omega_a}{2} T}{1-j\frac{\omega_a}{2} T}\right)
+$$
+
+Therefore the frequency warping can be expressed as follows:
+\begin{align*}
+H_d(z) = H_d(e^{j\omega_d T}) 
+	  &= H_a\left(\frac{2}{T} \frac{e^{j\omega_d T}-1}{e^{j\omega_d T}+1}\right) \\
+	  &= H_a\left(\frac{2}{T} \cdot \frac{e^{j\omega_d T/2}(e^{j\omega_d T/2}-e^{-j\omega_d T/2})}
+	  									 {e^{j\omega_d T/2}(e^{j\omega_d T/2}+e^{-j\omega_d T/2)}}\right) \\
+	  &= H_a\left(j\frac{2}{T} \cdot \frac{\sin(\omega_d T/2)}{\cos(\omega_d T/2)}\right) \\
+	  &= H_a\left(j\frac{2}{T} \cdot \tan(\omega_d T/2)\right)
+\end{align*}
+This shows that every point on the unit circle in the discrete-time filter z-plane, $z=e^{j\omega T}$ is mapped to a point on the $j\omega$ axis of the s-plane, $s=j\omega_a$. Hence the discrete-time to continuous-time frequency mapping of the bilinear transform:
+$$
+\boxed{
+\omega_a = \frac{2}{T} \tan\left( \omega_d \frac{T}{2} \right) \quad \Leftrightarrow \quad
+\omega_b = \frac{2}{T} \tan^{-1}\left( \omega_a \frac{T}{2} \right)
+}
+$$
+This means the \emph{discrete-time filter} behaves at frequency $\omega_d$ the same way the \emph{continuous-time filter} behaves at frequency $\omega_a = \frac{2}{T} \tan\left( \omega_d \frac{T}{2} \right)$. 
+
+Finally, given a specific frequency $\omega_0$, we can pre-warp this frequency when applying the Bilinear Transform as follows: 
+$$
+\boxed{
+s \: \hat{=} \: \frac{\omega_0}{\tan\left(\frac{\omega_0 T}{2}\right)} \frac{z-1}{z+1} 
+}
+$$
+
+Note that for $\omega_0 \rightarrow 0$, $s \: \hat{=} \: \frac{2}{h} \frac{z-1}{z+1}$. 
+
+\subsection{Matched Z-transform method}
+Also called \emph{Zero-Pole Matching Method} is a pretty straight forward method. It is applicable with a few steps:
+\begin{enumerate}
+\item Map the poles and zeros of the s-plane to the z-plane with the transformation $z = e^{sT}$. This provides the corresponding new transfer function in the z-domain. 
+\item Add zeros at infinity, which corresponds to multiplying the previously obtained transfer function by $(z+1)^n$ in order to have the same degree between the numerator and denominator of the transfer function. 
+\item Retrieve zeros to make the function strictly proper (deg(numerator)$<$deg(denominator)). 
+\item Calculate the DC-gain of both discrete-time and continuous time transfer functions and multiply the discrete-time transfer function by a gain $k_d$ such as $\text{DC-gain}(G(s)) = \text{DC-gain}(G(z)) \cdot k_d$.
+\end{enumerate}
+
+The DC-gain is obtained by setting $s = 0$ and $z = 1$ respectively. 
+
+\subsection{ZOH Approach (Zero Order Hold)}
+To apply a discrete signal to a continuous plant, a DA conversion is required. The most commonly used approach is the \emph{Zero Order Hold} method, where a discrete value will be hold until a second command value is emitted. This signal form will affect the discrete system and has to be accounted for. The signal sequence $v[k]$ goes through following blocks, until the output $Y(s)$: 
+$$
+v[k] \longrightarrow \text{ZOH} \longrightarrow G(s) \longrightarrow Y(s) \longrightarrow \text{AD} \longrightarrow y[k]
+$$ 
+We can express the ZOH as a series of steps, as the discrete values are hold:
+$$
+\text{ZOH} = v(t) = \sum_{k=0}^{\infty} v[k]_{\text{hold}} = \sum_{k=0}^{\infty} v[k]\Big( u(t-kT)-u(t-(k+1)T) \Big) 
+$$
+Hence
+$$
+V(s) = \sum_{k=0}^{\infty} v[k] \Big(\frac{1}{s}e^{-kTs} - \frac{1}{s}e^{-(k+1)Ts} \Big)
+	 = \frac{1 - e^{-Ts}}{s} \sum_{k=0}^{\infty} v[k]e^{-kTs}
+$$
+Therefore
+\begin{align*}
+Y(s) &=  V(s) \cdot G(s) \\
+  	 &= \frac{1 - e^{-Ts}}{s} \sum_{k=0}^{\infty} v[k]e^{-kTs} \cdot G(s) \\
+  	 z = e^{sT} &\Rightarrow \frac{1 - z^{-1}}{s} \sum_{k=0}^{\infty} v[k]z^{-k} \cdot G(s) \\
+Y(s) &= (1 - z^{-1})\frac{G(s)}{s} V(z)
+\end{align*}
+Finally
+$$
+\boxed{
+H(z) = \frac{Y(z)}{V(z)} = (1-z^{-1})\cdot \mathcal{Z} \Big( \mathcal{L}^{-1}\Big( \frac{G(s)}{s} \Big) \Big)_{t = kT}
 }
 $$
 
@@ -652,13 +752,13 @@ x(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} X(\omega) e^{j \omega t} d\omega
 $$
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{FourierContProperties.PNG}
+\includegraphics[scale=1]{1FourierContProperties.PNG}
 \caption{A list of properties of the Fourier transformation}
 \label{FourierContProperties}
 \end{figure}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{FourierContIdentities.PNG}
+\includegraphics[scale=1]{1FourierContIdentities.PNG}
 \caption{A list of known Fourier transformations}
 \end{figure}
 
@@ -670,13 +770,13 @@ x[n] = \frac{1}{2\pi} \int_{2\pi} X(\Omega)e^{j \Omega n} d\Omega
 $$
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{FourierContProperties.PNG}
+\includegraphics[scale=1]{2FourierDiscreteProperties.PNG}
 \caption{A list of properties of the Time Discrete Fourier transformation}
 \label{FourierContProperties}
 \end{figure}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{FourierContIdentities.PNG}
+\includegraphics[scale=0.9]{2FourierDiscreteIdentities.PNG}
 \caption{A list of known Time Discrete Fourier transformations}
 \end{figure}
 
@@ -688,13 +788,13 @@ x(t) = \frac{1}{2\pi j} \int_{\sigma-\infty}^{\sigma+\infty} X(s)e^{st}ds
 $$
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{FourierContProperties.PNG}
+\includegraphics[scale=0.8]{3LaplaceProperties.PNG}
 \caption{A list of properties of the Laplace transformation}
 \label{FourierContProperties}
 \end{figure}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{FourierContIdentities.PNG}
+\includegraphics[scale=0.9]{3LaplaceIdentities.PNG}
 \caption{A list of known Laplace transformations}
 \end{figure}
 
@@ -706,14 +806,32 @@ x[n] = \frac{1}{2\pi j} \oint_C X(z)z^{n-1} dz
 $$
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{FourierContProperties.PNG}
+\includegraphics[scale=0.9]{4ZProperties.PNG}
 \caption{A list of properties of the z-transformation}
 \label{FourierContProperties}
 \end{figure}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{FourierContIdentities.PNG}
+\includegraphics[scale=0.9]{4ZIdentities.PNG}
 \caption{A list of known z-transformations}
 \end{figure}
+
+\section{Complement}
+\subsection{Solving Differential Equations}
+\begin{sidewaysfigure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{EquaDiff_1.PNG}
+\caption{Methods for solving first order differential equations.}
+\end{figure}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{EquaDiff_2.PNG}1
+\caption{Methods for solving second order differential equations.}
+\end{figure}
+\end{sidewaysfigure}
 
 \end{document}
