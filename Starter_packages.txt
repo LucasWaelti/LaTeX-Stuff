@@ -1,41 +1,42 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
-\usepackage{amsfonts}	%Gestion dans les environnements mathématiques.
+\usepackage{amsfonts}	%Gestion dans les environnements mathÃ©matiques.
 \usepackage{amssymb}
-\usepackage{bbm}		%Gestion des caractères pour les ensembles (N, Z, Q, R, C)
+\usepackage{bbm}		%Gestion des caractÃ¨res pour les ensembles (N, Z, Q, R, C)
 \usepackage{graphicx} 	%Gestion des images.
-\usepackage{array}		%Gestion spécifique pour les tableaux.
-						%Paramètres de placement dans les cellules: m, p, b. 
+\usepackage{array}		%Gestion spÃ©cifique pour les tableaux.
+						%ParamÃ¨tres de placement dans les cellules: m, p, b. 
 						%Avec dimensionnement de la colonne: m{2cm}.
-\usepackage{multicol}	%Gère la mise en colonnes du texte.
-\usepackage[french]{babel}  %Pour les fonctionnalités en français (language).
-\usepackage[T1]{fontenc}    %Pour les fonctionnalités en français (font),
-							%parmamètre par défaut: OT1.
-\usepackage{fancyhdr}	%Gère la personnalisation des headers.
+\usepackage{multicol}	%GÃ¨re la mise en colonnes du texte.
+\usepackage[french]{babel}  %Pour les fonctionnalitÃ©s en franÃ§ais (language).
+\usepackage[T1]{fontenc}    %Pour les fonctionnalitÃ©s en franÃ§ais (font),
+							%parmamÃ¨tre par dÃ©faut: OT1.
+\usepackage{fancyhdr}	%GÃ¨re la personnalisation des headers.
 \usepackage{geometry}
-\usepackage{marginnote}	%Gère la création de notes en marge du texte.
+% or specify marging: \usepackage[top=0.8in, bottom=0.8in, left=0.8in, right=0.8in]{geometry}
+\usepackage{marginnote}	%GÃ¨re la crÃ©ation de notes en marge du texte.
 \usepackage{adjustbox}	%Options additionnelles de placement de l'image 
 						%(left, right, center, outer and inner)
 \usepackage{float}
-\usepackage{rotating}	%Permet d'afficher une image, tournée de 90 degrés.
+\usepackage{rotating}	%Permet d'afficher une image, tournÃ©e de 90 degrÃ©s.
 %-----------------------------------------------------------------------------
 \title{Utilisation de fonctions \LaTeX}
-\author{Lucas Wälti}
+\author{Lucas WÃ¤lti}
 \date{\today}
 %-----------------------------------------------------------------------------
 \pagestyle{fancy} 	%Types de headers standards: empty, plain (default),
 					%							 headings, myheadings, fancy.
-\fancyhf{}			%Clear le header et footer par défaut.
+\fancyhf{}			%Clear le header et footer par dÃ©faut.
 \rhead{Share\LaTeX}
-\lhead{Guides and tutorials}	%Texte à droite, gauche et au centre du header.
+\lhead{Guides and tutorials}	%Texte Ã  droite, gauche et au centre du header.
 \chead{}
 \rfoot{}
 \lfoot{}
-\cfoot{Page \thepage}			%Texte du footer (ici: numéro de page).
+\cfoot{Page \thepage}			%Texte du footer (ici: numÃ©ro de page).
 
 \renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0pt}	%Lignes horizontales de séparation.
+\renewcommand{\footrulewidth}{0pt}	%Lignes horizontales de sÃ©paration.
 
 % For Fourier, Laplace, Z --> use \mathcal{L}
 
